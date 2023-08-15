@@ -239,12 +239,9 @@
   };
 
   ns.DrawingController.prototype.onMousewheel_ = function (evt) {
-    // Ratio between wheelDeltaY (mousewheel event) and deltaY (wheel event) is -40
     var delta;
     if (pskl.utils.UserAgent.isIE11) {
       delta = evt.wheelDelta;
-    } else if (pskl.utils.UserAgent.isFirefox) {
-      delta = -40 * evt.deltaY;
     } else {
       delta = evt.wheelDeltaY;
     }
