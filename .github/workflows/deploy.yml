@@ -17,13 +17,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+          node-version: 18
 
       - name: Install grunt
         run: npm install grunt-cli -g
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
       - name: Build project using grunt
         run: grunt
